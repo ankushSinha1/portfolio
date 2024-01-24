@@ -23,6 +23,7 @@ width: 100%;
 border-radius: 16px;
 margin: 50px 12px;
 height: min-content;
+${'' /* margin-top: 1000px; */}
 background-color: ${({ theme }) => theme.card};
 color: ${({ theme }) => theme.text_primary};
 padding: 20px;
@@ -35,7 +36,7 @@ const Title = styled.div`
   font-size: 28px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
-  margin: 8px 6px 0px 6px;
+  margin: 18px 6px 0px 6px;
   @media only screen and (max-width: 600px) {
       font-size: 24px;
       margin: 6px 6px 0px 6px;
@@ -197,7 +198,7 @@ const index = ({ openModal, setOpenModal }) => {
                         }}
                         onClick={() => setOpenModal({ state: false, project: null })}
                     />
-                    <Image src={project?.image} />
+                    {/* <Image src={project?.image} /> */}
                     <Title>{project?.title}</Title>
                     <Date>{project.date}</Date>
                     <Tags>

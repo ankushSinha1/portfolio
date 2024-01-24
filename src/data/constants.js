@@ -52,11 +52,7 @@ export const skills = [
         image:
           "https://symbols.getvecta.com/stencil_25/78_semantic-ui.b3a02ff612.jpg",
       },
-      {
-        name: "Tailwind CSS",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
-      },
+
       {
         name: "SASS",
         image:
