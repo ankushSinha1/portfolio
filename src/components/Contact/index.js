@@ -118,6 +118,9 @@ const ContactButton = styled.input`
   color: ${({ theme }) => theme.text_primary};
   font-size: 18px;
   font-weight: 600;
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 
@@ -130,39 +133,55 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
-      .then((result) => {
-        setOpen(true);
-        form.current.reset();
-      }, (error) => {
-        console.log(error.text);
+    emailjs.sendForm('service_uycbl4m', 'template_o8v5oww', form.current, 'KjNuXr2Sqox9qU0Tb')
+      .then(function(response) {
+        console.log('Email sent!', response.status, response.text);
+        alert('Email sent successfully!');
+      }, function(error) {
+        console.error('Error sending email:', error);
+        alert('Oops! Something went wrong.');
       });
+    // emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
+    //   .then((result) => {
+    //     setOpen(true);
+    //     form.current.reset();
+    //   }, (error) => {
+    //     console.log(error.text);
+    //   });
   }
 
 
 
   return (
-    <Container>
-      <Wrapper>
-        <Title>Contact</Title>
-        <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
-        <ContactForm ref={form} onSubmit={handleSubmit}>
-          <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
-          <ContactButton type="submit" value="Send" />
-        </ContactForm>
-        <Snackbar
-          open={open}
-          autoHideDuration={6000}
-          onClose={()=>setOpen(false)}
-          message="Email sent successfully!"
-          severity="success"
-        />
-      </Wrapper>
-    </Container>
+    <div>
+
+        <Container>
+          <Wrapper>
+            <Title>Contact</Title>
+            <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
+            <ContactForm ref={form} onSubmit={handleSubmit}>
+              <ContactTitle>Email Me 🚀</ContactTitle>
+              {/* <ContactInput placeholder="Your Email" name="from_email" />
+              <ContactInput placeholder="Your Name" name="from_name" />
+              <ContactInput placeholder="Subject" name="subject" />
+              <ContactInputMessage placeholder="Message" rows="4" name="message" />
+              <ContactButton type="submit" value="Send" /> */}
+              <ContactInput type="text" name="from_name" placeholder="Your Name" required/>
+              <ContactInput type="email" name="from_email" placeholder="Your Email" required/>
+              <ContactInput placeholder="Subject" name="subject" required/>
+              <ContactInputMessage name="message" placeholder="Your Message" rows="4" required></ContactInputMessage>
+              <ContactButton type="submit" value="Send" />
+            </ContactForm>
+            <Snackbar
+              open={open}
+              autoHideDuration={6000}
+              onClose={()=>setOpen(false)}
+              message="Email sent successfully!"
+              severity="success"
+            />
+          </Wrapper>
+        </Container>
+    </div>
   )
 }
 
