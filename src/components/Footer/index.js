@@ -99,12 +99,6 @@ function Footer() {
           <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
           <SocialMediaIcon href={Bio.insta} target="display"><InstagramIcon /></SocialMediaIcon>
         </SocialMediaIcons>
-        <div>
-        sinha.ankush5454@gmail.com
-        </div>
-        <div>
-        +91 8417-927-972
-        </div>
       </FooterWrapper>
     </FooterContainer>
   );
