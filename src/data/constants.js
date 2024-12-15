@@ -8,7 +8,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/ankushSinha1",
   resume:
-    "https://drive.google.com/file/d/1Z9lK1nkYHx--4mbOJbwYv0qzzZ7ljeGB/view?usp=sharing",
+    "https://drive.google.com/file/d/1j2GrOPmo3O3RHLQLUwofDDto3W2CFVba/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/ankush-sinha-355207223/",
   insta: "https://www.instagram.com/sinha_.ankush/",
   leetcode: "https://leetcode.com/ankushSinha1/"
